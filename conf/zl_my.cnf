@@ -1,0 +1,8 @@
+[mysqld]
+character_set_server = utf8
+collation_server = utf8_general_ci
+skip-host-cache
+skip-name-resolve
+skip-external-locking
+max_connections = 1024
+log-error = /var/lib/mysql/mysql.err
