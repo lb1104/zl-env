@@ -5,7 +5,7 @@
 fold_path=$(cd `dirname $0`; pwd)
 #echo $fold_path
 
-docker_run="docker run --name zl --restart always -d -v $fold_path:/work -p 10000:80 -p 10020:8020 -p 10021:8021 lb1104/zlenv sh /work/start.sh"
+docker_run="docker run --name zl --link mysql:museumdb -d -v $fold_path:/work -p 10000:80 -p 10020:8020 -p 10021:8021 lb1104/zlenv sh /work/start.sh"
 #--restart always
 
 is_win=$(echo $OS | grep -i "win")

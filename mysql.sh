@@ -11,7 +11,7 @@ fi
 
 is_win=$(echo $OS | grep -i "win")
 
-docker_run="docker run --name mysql --restart always -v $fold_path/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=mysql -p 3306:3306 -d mysql:5.6"
+docker_run="docker run --name mysql -v $fold_path/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=mysql -p 3306:3306 -d mysql:5.6"
 
 docker_info=`docker info 2>&1`
 # 判断是否在docker环境下
